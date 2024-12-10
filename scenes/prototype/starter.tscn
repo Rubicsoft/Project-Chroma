@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://4ofuoir08uwv"]
+[gd_scene load_steps=2 format=3 uid="uid://4ofuoir08uwv"]
+
+[ext_resource type="TileSet" uid="uid://cwepyrt580gs4" path="res://tiles/prototype_tileset.tres" id="1_1e06a"]
 
 [node name="Starter" type="Node2D"]
+
+[node name="Tiles" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="Prototype_Blocking" type="TileMapLayer" parent="Tiles"]
+position = Vector2(0, 1)
+tile_set = ExtResource("1_1e06a")

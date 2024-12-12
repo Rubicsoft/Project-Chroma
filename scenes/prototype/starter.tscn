@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://4ofuoir08uwv"]
+[gd_scene load_steps=4 format=3 uid="uid://4ofuoir08uwv"]
 
 [ext_resource type="TileSet" uid="uid://cwepyrt580gs4" path="res://tiles/prototype_tileset.tres" id="1_1e06a"]
+[ext_resource type="PackedScene" uid="uid://cdtmrm73r3jbp" path="res://prefabs/player.tscn" id="2_mmkla"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pnu4g"]
 
 [node name="Starter" type="Node2D"]
 
@@ -10,3 +13,13 @@ position = Vector2(0, -1)
 [node name="Prototype_Blocking" type="TileMapLayer" parent="Tiles"]
 position = Vector2(0, 1)
 tile_set = ExtResource("1_1e06a")
+
+[node name="Player" parent="." instance=ExtResource("2_mmkla")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_pnu4g")

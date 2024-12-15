@@ -25,3 +25,10 @@ grow_vertical = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_yi278")
+
+[node name="Timer" type="Node" parent="."]
+
+[node name="DashCooldown" type="Timer" parent="Timer"]
+one_shot = true
+
+[connection signal="timeout" from="Timer/DashCooldown" to="." method="_on_dash_cooldown_timeout"]

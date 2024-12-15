@@ -4,7 +4,7 @@ class_name Player
 @export var player_camera: Camera2D
 @export var camera_pivot: Node2D
 
-@export var speed = 40.0
+@export var speed = 30.0
 @export var jump_velocity = 16.0
 
 var cam_follow: bool = true

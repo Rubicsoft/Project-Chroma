@@ -54,7 +54,7 @@ func camera_follows_player(is_following: bool, delta: float) -> void:
 
 # Handle dashing
 func start_dash(delta: float) -> void:
-	if Input.is_action_just_pressed("dash") and dash_times > 0:
+	if Input.is_action_just_pressed("dash"):
 		print("DASH")
 		if player_direction:
 			velocity.x = player_direction * speed * dash_multiplier * 1000.0 * delta
